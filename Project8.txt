@@ -1,0 +1,11 @@
+#!/bin/sh
+#enter the domain with credentails
+echo "enter the domain"
+read t
+read -p "username :" x
+read -p "password :" y
+echo
+echo "username :" $x
+echo "password :" $y
+echo "Hi $x Welcome to our website"
+  
