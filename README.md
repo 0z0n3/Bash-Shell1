@@ -6,3 +6,4 @@
 5. Bash script to change file time
 6. Bash script to create login form for enter into website
 7. Bash script to adding files into one
+8. Bash script for extracting info of network,host,mx,connectivity,ports etc.. records of domain (All in One)
