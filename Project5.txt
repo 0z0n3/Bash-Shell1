@@ -1,0 +1,6 @@
+#! /bin/sh
+#searching for web details
+echo "enter the domain"
+read x
+y=$(whois $x | grep -i "email")
+echo $y
