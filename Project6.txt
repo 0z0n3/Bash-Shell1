@@ -1,0 +1,8 @@
+#!/bin/bash
+#checking the ip's
+echo 'enter the domain'
+read x
+y=$(nslookup -query=mx $x | grep 'mail')
+echo $y
+y1=$(dig $x+MX | grep 'servers')
+echo $y1
