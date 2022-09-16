@@ -1,0 +1,10 @@
+#!/bin/sh
+#adding files into one
+read x y z
+touch $x $y $z
+read z
+tar cvf $z *.txt 
+ls -lrtha
+rm -r *.txt 
+ls -lrtha
+tar xvf $z
