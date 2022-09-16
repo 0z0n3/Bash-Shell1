@@ -1,0 +1,10 @@
+#! /bin/sh
+
+# checking website status
+echo "enter the website"
+read y
+x=$(wget $y)
+echo find the file
+read p
+cat index.html | grep -i $p *.html.* 
+echo $x
