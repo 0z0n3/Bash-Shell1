@@ -1,0 +1,15 @@
+#!/bin/sh
+echo "enter the value"
+read x
+read y
+if (( $x > 1 ))
+then
+host  $y
+ip -br -c addr show
+ip -br -c link show
+ip n show
+nslookup -query=mx $y | grep 'mail' | awk '{print $6}'
+ping -c 1 $y | grep '64 bytes' | awk '{print $4}'
+whois $y |  head -10
+nmap -allports $y | grep -v 'SYN Stealth Scan Timing' | grep -v 'Stats' | grep -v 'Host is up' | grep -v 'Not shown' | grep -v 'Starting'
+fi
