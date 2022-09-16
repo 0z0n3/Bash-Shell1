@@ -1,0 +1,9 @@
+#!/bin/bash
+#changing file time
+echo "enter the file"
+read x
+y=$(touch $x | stat $x)
+echo $y
+#enter the date
+t1=$(touch -t 1212121212.12 $x | stat $x)
+echo $t1 
