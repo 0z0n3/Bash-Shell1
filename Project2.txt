@@ -1,0 +1,8 @@
+#!/bin/bash
+#to change mac address
+y=$(ifconfig)
+echo $y
+x=$(ifconfig eth0 down | macchanger -a eth0 | ifconfig eth0 up )
+echo $x
+t=$(ifconfig)
+echo $t
